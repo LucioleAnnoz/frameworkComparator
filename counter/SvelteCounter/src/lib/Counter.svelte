@@ -1,7 +1,7 @@
 <script>
     let counter = 0;
 
-    const buttonStyle = 'px-10 py-8 bg-blue-700 text-white text-4xl hover:bg-cyan-500 transition-all duration-500 hover:outline'
+    const buttonStyle = 'px-10 py-8 bg-blue-700 text-white text-4xl hover:bg-cyan-500 transition-all duration-500 hover:outline rounded-xl'
 
     function addOne() {
         counter += 1;
@@ -16,7 +16,7 @@
     <button class={buttonStyle} on:click={minusOne}>-1</button>
     <p class="px-10 py-8 text-white text-6xl font-bold w-40 text-center">{ counter }</p>
     <button class={buttonStyle} on:click={addOne}>+1</button>
-  </div>
+</div>
 
   <style scoped>
 .counter-container {

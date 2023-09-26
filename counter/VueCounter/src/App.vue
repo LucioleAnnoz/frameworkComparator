@@ -3,16 +3,7 @@ import Counter from "./components/Counter.vue";
 </script>
 
 <template>
-  <main>
+  <main class="h-screen flex items-center justify-center">
     <Counter />
   </main>
 </template>
-
-<style scoped>
-main {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-</style>

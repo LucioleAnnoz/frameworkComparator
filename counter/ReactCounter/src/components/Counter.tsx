@@ -3,7 +3,7 @@ import './Counter.css'
 
 export default function Counter() {
     const [counter, setCounter] = useState(0);
-    const buttonStyle = 'px-10 py-8 bg-blue-700 text-white text-4xl hover:bg-cyan-500 transition-all duration-500 hover:outline'
+    const buttonStyle = 'px-10 py-8 bg-blue-700 text-white text-4xl hover:bg-cyan-500 transition-all duration-500 hover:outline rounded-xl'
     
     function minusOne() {
         setCounter(prev => prev - 1)

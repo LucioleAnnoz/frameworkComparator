@@ -1,7 +1,7 @@
 # Framework Comparator
 
 ## Simple Counter
-### Angular 251 Mo
-### Vue 28 Mo
+### Angular + tailwind 260 Mo
+### Vue + tailwind 43 Mo
 ### React + tailwind 103 Mo
 ### Svelte + tailwind 122 Mo

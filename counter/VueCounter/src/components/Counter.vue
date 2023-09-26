@@ -1,31 +1,27 @@
 <script setup>
 import { ref } from "vue";
 const counter = ref(0);
+const buttonStyle =
+  "px-10 py-8 bg-blue-700 text-white text-4xl hover:bg-cyan-500 transition-all duration-500 hover:outline rounded-xl";
+
 const minusOne = () => (counter.value -= 1);
 const addOne = () => (counter.value += 1);
 </script>
 
 <template>
-  <div class="container">
-    <button @click="minusOne">-1</button>
-    <p>{{ counter }}</p>
-    <button @click="addOne">+1</button>
+  <div
+    class="counter-container flex items-center justify-center gap-8 px-14 py-16 rounded-3xl bg-gradient-to-r from-purple-700 via-red-600 to-yellow-500"
+  >
+    <button :class="buttonStyle" @click="minusOne">-1</button>
+    <p class="px-10 py-8 text-white text-6xl font-bold w-40 text-center">
+      {{ counter }}
+    </p>
+    <button :class="buttonStyle" @click="addOne">+1</button>
   </div>
 </template>
 
 <style scoped>
-.container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 4rem 3rem;
-  border-radius: 10%;
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
+.counter-container {
   background-size: 200% 200%;
   animation: wave 5s ease infinite;
 }
@@ -40,25 +36,5 @@ const addOne = () => (counter.value += 1);
   100% {
     background-position: 0% 50%;
   }
-}
-button,
-p {
-  padding: 2rem 3rem;
-  border-radius: 10%;
-  font-size: 2rem;
-  color: white;
-}
-
-button {
-  background: rgba(9, 9, 121, 1);
-  transition: background 500ms;
-}
-button:hover {
-  outline: 5px solid black;
-  background: #00d4ff;
-}
-p {
-  font-size: 3rem;
-  font-weight: bold;
 }
 </style>
