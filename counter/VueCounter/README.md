@@ -22,8 +22,20 @@ npm install
 npm run dev
 ```
 
+### Run Unit Tests
+
+```sh
+npm run test
+```
+
+
 ### Compile and Minify for Production
 
 ```sh
 npm run build
+```
+
+### Run locally build version
+```sh
+npx lite-server --baseDir="dist"
 ```

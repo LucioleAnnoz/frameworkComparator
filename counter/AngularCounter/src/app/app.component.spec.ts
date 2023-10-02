@@ -1,9 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CounterComponent } from './counter/counter.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
+    declarations: [AppComponent, CounterComponent]
   }));
 
   it('should create the app', () => {
@@ -18,10 +19,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('AngularCounter');
   });
 
-  it('should render title', () => {
+  it('should render Counter component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('AngularCounter app is running!');
+    expect(compiled.querySelector('.counter-container')?.innerHTML).toContain('app-counter');
   });
 });

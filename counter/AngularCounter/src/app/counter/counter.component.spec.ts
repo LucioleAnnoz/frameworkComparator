@@ -18,4 +18,22 @@ describe('CounterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be created with a counter to 0', () => {
+    expect(component.counter).toBe(0);
+  })
+
+  describe('plusOne', () => {
+    it('should be counter to 1', () => {
+      component.addOne();
+      expect(component.counter).toBe(1);
+    })
+  });
+
+  describe('minusOne', () => {
+    it('should be counter to -1', () => {
+      component.minusOne();
+      expect(component.counter).toBe(-1);
+    })
+  });
 });
